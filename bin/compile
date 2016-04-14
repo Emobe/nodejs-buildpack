@@ -168,7 +168,7 @@ mv ffmpeg-3.0.1-64bit-static ffmpeg
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-export PATH="$PATH:$HOME/vendor/ffmpeg"
+export PATH="$PATH:$BUILD_DIR/vendor/ffmpeg"
 cd ~/app
 
 ls -a
