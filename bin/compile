@@ -173,6 +173,8 @@ export PATH="$PATH:ffmpeg/"
 header "Caching build"
 cache_build | output "$LOG_FILE"
 ./ffmpeg/ffmpeg -codecs
+echo 'eyey'
+ffmpeg -codecs
 summarize_build() {
   cd $BUILD_DIR
   (npm ls --depth=0 | tail -n +2 || true) 2>/dev/null
