@@ -169,7 +169,6 @@ echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 export PATH="$PATH:ffmpeg/"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ffmpeg/lib"
 
 header "Caching build"
 cache_build | output "$LOG_FILE"
