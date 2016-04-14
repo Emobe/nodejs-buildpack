@@ -162,17 +162,19 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar -Jxf -
-ls -a
+
 mv ffmpeg-3.0.1-64bit-static ffmpeg
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 export PATH="$PATH:$HOME/vendor/ffmpeg"
+cd ~
+
+ls -a
 
 header "Caching build"
 cache_build | output "$LOG_FILE"
-./ffmpeg/ffmpeg -codecs
 echo 'eyey'
 ffmpeg -codecs
 summarize_build() {
