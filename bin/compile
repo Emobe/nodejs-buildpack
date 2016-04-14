@@ -163,7 +163,7 @@ mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar -Jxf -
 ls -a
-mv ffmpeg-2.8-64bit-static ffmpeg
+mv ffmpeg-3.0.1-64bit-static ffmpeg
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
